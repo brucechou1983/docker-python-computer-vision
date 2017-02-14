@@ -25,7 +25,9 @@ cmake -DCMAKE_BUILD_TYPE=RELEASE \
 -DPYTHON2_NUMPY_INCLUDE_DIRS=/usr/lib/python2.7/dist-packages/numpy/core/include/ \
 -DINSTALL_PYTHON_EXAMPLES=ON \
 -DBUILD_NEW_PYTHON_SUPPORT=ON .. \
-&& make -j2 && make install
+&& make -j4 && make install \
+&& rm 2.4.13.2.tar.gz \
+&& rm -rf opencv-2.4.13.2
 
 # Fix cv2 import warning
 RUN ln /dev/null /dev/raw1394
