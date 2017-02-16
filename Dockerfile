@@ -26,8 +26,8 @@ cmake -DCMAKE_BUILD_TYPE=RELEASE \
 -DINSTALL_PYTHON_EXAMPLES=ON \
 -DBUILD_NEW_PYTHON_SUPPORT=ON .. \
 && make -j4 && make install \
-&& rm 2.4.13.2.tar.gz \
-&& rm -rf opencv-2.4.13.2
+RUN rm 2.4.13.2.tar.gz \
+RUN rm -rf opencv-2.4.13.2
 
 # Fix cv2 import warning
 RUN ln /dev/null /dev/raw1394
